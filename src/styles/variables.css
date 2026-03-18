@@ -1,0 +1,8 @@
+:root {
+  --app-space-1: 0.25rem;
+  --app-space-2: 0.5rem;
+  --app-space-3: 0.75rem;
+  --app-space-4: 1rem;
+  --app-radius-sm: 0.5rem;
+  --app-text-muted: var(--ion-color-medium);
+}

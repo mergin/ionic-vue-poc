@@ -1,0 +1,46 @@
+{
+  "app": {
+    "title": "PoC de Migracion Ionic Vue",
+    "language": "Idioma",
+    "english": "Ingles",
+    "spanish": "Espanol"
+  },
+  "tabs": {
+    "weather": "Clima",
+    "gallery": "Galeria",
+    "social": "Red Social"
+  },
+  "a11y": {
+    "mainTabs": "Pestanas principales de navegacion",
+    "weatherMain": "Contenido de la funcionalidad de clima",
+    "galleryMain": "Contenido de la funcionalidad de galeria",
+    "socialMain": "Contenido de la funcionalidad de red social"
+  },
+  "weather": {
+    "title": "Clima",
+    "description": "Resumen del clima actual con servicios tipados.",
+    "loading": "Cargando datos del clima...",
+    "error": "No se pudieron cargar los datos del clima.",
+    "status": "Clima en {city}: {temperature} C y {condition}.",
+    "humidity": "Humedad: {value}%",
+    "wind": "Viento: {value} km/h"
+  },
+  "gallery": {
+    "title": "Galeria",
+    "description": "Imagenes de ejemplo desde mocks de migracion.",
+    "loading": "Cargando imagenes...",
+    "error": "No se pudieron cargar las imagenes.",
+    "empty": "Aun no hay imagenes."
+  },
+  "social": {
+    "title": "Red Social",
+    "description": "Publicaciones recientes para seguimiento de paridad.",
+    "loading": "Cargando publicaciones...",
+    "error": "No se pudo cargar el feed social.",
+    "empty": "Aun no hay publicaciones."
+  },
+  "common": {
+    "retry": "Reintentar",
+    "updatedAt": "Actualizado a las {time}"
+  }
+}

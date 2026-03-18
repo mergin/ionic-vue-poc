@@ -1,23 +1,26 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Tab 2</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <AppHeader title-key="gallery.title" />
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 2</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <ExploreContainer name="Tab 2 page" />
+      <main class="tab-main" :aria-label="t('a11y.galleryMain')">
+        <GalleryPanel />
+      </main>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import { IonContent, IonPage } from '@ionic/vue'
+import { useI18n } from 'vue-i18n'
+
+import AppHeader from '@/app/AppHeader.vue'
+import GalleryPanel from '@/features/image-gallery/components/GalleryPanel.vue'
+
+const { t } = useI18n()
 </script>
+
+<style scoped>
+.tab-main {
+  padding: 1rem;
+}
+</style>

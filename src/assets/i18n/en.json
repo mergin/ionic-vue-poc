@@ -1,0 +1,46 @@
+{
+  "app": {
+    "title": "Ionic Vue Migration PoC",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "tabs": {
+    "weather": "Weather",
+    "gallery": "Image Gallery",
+    "social": "Social Media"
+  },
+  "a11y": {
+    "mainTabs": "Main navigation tabs",
+    "weatherMain": "Weather feature content",
+    "galleryMain": "Image gallery feature content",
+    "socialMain": "Social media feature content"
+  },
+  "weather": {
+    "title": "Weather",
+    "description": "Current weather summary powered by typed services.",
+    "loading": "Loading weather data...",
+    "error": "Unable to load weather data.",
+    "status": "Weather for {city}: {temperature} C and {condition}.",
+    "humidity": "Humidity: {value}%",
+    "wind": "Wind: {value} km/h"
+  },
+  "gallery": {
+    "title": "Image Gallery",
+    "description": "Curated sample images from migration mocks.",
+    "loading": "Loading gallery images...",
+    "error": "Unable to load gallery images.",
+    "empty": "No images yet."
+  },
+  "social": {
+    "title": "Social Media",
+    "description": "Recent social updates for parity tracking.",
+    "loading": "Loading posts...",
+    "error": "Unable to load social feed.",
+    "empty": "No posts yet."
+  },
+  "common": {
+    "retry": "Retry",
+    "updatedAt": "Updated at {time}"
+  }
+}

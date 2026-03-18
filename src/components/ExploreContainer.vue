@@ -1,14 +1,19 @@
 <template>
   <div id="container">
     <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      Explore
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps({
-  name: String,
-});
+defineProps<{
+  name?: string
+}>()
 </script>
 
 <style scoped>
@@ -29,7 +34,7 @@ defineProps({
 #container p {
   font-size: 16px;
   line-height: 22px;
-  color: #8c8c8c;
+  color: var(--app-text-muted);
   margin: 0;
 }
 
