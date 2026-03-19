@@ -1,4 +1,4 @@
-import { onCLS, onINP, onLCP, onTTFB } from 'web-vitals'
+import { onCLS, onINP, onLCP, onTTFB } from 'web-vitals';
 
 /**
  * Reports production web-vitals to the browser console.
@@ -6,19 +6,19 @@ import { onCLS, onINP, onLCP, onTTFB } from 'web-vitals'
  */
 export function setupWebVitalsReporting(): void {
   if (!import.meta.env.PROD) {
-    return
+    return;
   }
 
   onCLS((metric) => {
-    console.info('[web-vitals]', metric.name, metric.value)
-  })
+    console.info('[web-vitals]', metric.name, metric.value);
+  });
   onINP((metric) => {
-    console.info('[web-vitals]', metric.name, metric.value)
-  })
+    console.info('[web-vitals]', metric.name, metric.value);
+  });
   onLCP((metric) => {
-    console.info('[web-vitals]', metric.name, metric.value)
-  })
+    console.info('[web-vitals]', metric.name, metric.value);
+  });
   onTTFB((metric) => {
-    console.info('[web-vitals]', metric.name, metric.value)
-  })
+    console.info('[web-vitals]', metric.name, metric.value);
+  });
 }

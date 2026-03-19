@@ -1,17 +1,17 @@
-import { registerAppIcons } from '@/app/icon-registry'
-import { afterAll, afterEach, beforeAll } from 'vitest'
-import { mswServer } from './msw-server'
+import { registerAppIcons } from '@/app/icon-registry';
+import { afterAll, afterEach, beforeAll } from 'vitest';
+import { mswServer } from './msw-server';
 
-registerAppIcons()
+registerAppIcons();
 
 beforeAll(() => {
-  mswServer.listen({ onUnhandledRequest: 'error' })
-})
+  mswServer.listen({ onUnhandledRequest: 'error' });
+});
 
 afterEach(() => {
-  mswServer.resetHandlers()
-})
+  mswServer.resetHandlers();
+});
 
 afterAll(() => {
-  mswServer.close()
-})
+  mswServer.close();
+});

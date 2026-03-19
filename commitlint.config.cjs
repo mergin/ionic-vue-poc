@@ -35,4 +35,4 @@ module.exports = {
     // Scope is optional (e.g. "chore: bump node version")
     'scope-empty': [0],
   },
-}
+};

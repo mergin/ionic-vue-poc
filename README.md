@@ -226,8 +226,17 @@ Recommended follow-up path:
   - [.husky/pre-commit](.husky/pre-commit)
   - [.husky/commit-msg](.husky/commit-msg)
 
-## Migration Documentation
+## Commit Rules
 
-- Playbook: [docs/ionic-vue-migration-copilot-playbook.md](docs/ionic-vue-migration-copilot-playbook.md)
-- Parity matrix: [docs/parity-matrix.md](docs/parity-matrix.md)
-- Weather parity notes: [docs/weather-parity-notes.md](docs/weather-parity-notes.md)
+- Use conventional commit messages: `<type>(<scope>): <subject>`
+  - Example: `feat(social-media): add like button accessibility label`
+- Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`
+- Scope should match feature, domain, or tooling area (e.g., `weather`, `gallery`, `core`, `build`)
+- Subject should be concise and imperative
+- All commits are checked by commitlint and must pass the pre-commit hook
+- See [commitlint.config.cjs](commitlint.config.cjs) for allowed types and scopes
+- See [.husky/commit-msg](.husky/commit-msg) for commit message enforcement
+
+---
+
+_Last update: March 19, 2026_

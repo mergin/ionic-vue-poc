@@ -1,5 +1,5 @@
-import { addIcons } from 'ionicons'
-import { imagesOutline, languageOutline, partlySunnyOutline, peopleOutline } from 'ionicons/icons'
+import { addIcons } from 'ionicons';
+import { imagesOutline, languageOutline, partlySunnyOutline, peopleOutline } from 'ionicons/icons';
 
 /** Registers all Ionicons used by app templates. */
 export function registerAppIcons(): void {
@@ -8,5 +8,5 @@ export function registerAppIcons(): void {
     'images-outline': imagesOutline,
     'people-outline': peopleOutline,
     'language-outline': languageOutline,
-  })
+  });
 }

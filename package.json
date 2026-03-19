@@ -22,7 +22,8 @@
     "clean": "rm -rf package-lock.json .lighthouseci/ dist/ node_modules/",
     "rebuild": "npm run clean && npm install && npm run build",
     "commitlint": "commitlint --edit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@capacitor/app": "8.0.1",
@@ -47,6 +48,7 @@
     "@eslint/js": "^10.0.1",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.58.2",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-legacy": "^8.0.0",
     "@vitejs/plugin-vue": "^6.0.5",
@@ -76,7 +78,7 @@
       "prettier --write"
     ]
   },
-  "description": "An Ionic project",
+  "description": "An Ionic Vue project",
   "msw": {
     "workerDirectory": [
       "public"

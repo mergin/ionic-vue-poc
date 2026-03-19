@@ -37,7 +37,14 @@
     "description": "Publicaciones recientes para seguimiento de paridad.",
     "loading": "Cargando publicaciones...",
     "error": "No se pudo cargar el feed social.",
-    "empty": "Aun no hay publicaciones."
+    "empty": "Aun no hay publicaciones.",
+    "feedAriaLabel": "Feed de red social",
+    "like": "Me gusta",
+    "repost": "Repostear",
+    "likes": "Me gusta",
+    "reposts": "Reposteos",
+    "postedAt": "Publicado a las {time}",
+    "by": "por {author}"
   },
   "common": {
     "retry": "Reintentar",

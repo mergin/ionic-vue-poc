@@ -31,25 +31,25 @@ import {
   IonSelectOption,
   IonTitle,
   IonToolbar,
-} from '@ionic/vue'
-import type { SelectCustomEvent } from '@ionic/vue'
-import { storeToRefs } from 'pinia'
-import { useI18n } from 'vue-i18n'
+} from '@ionic/vue';
+import type { SelectCustomEvent } from '@ionic/vue';
+import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n';
 
-import { useAppStore, type AppLocale } from '@/core/state/app-store'
+import { useAppStore, type AppLocale } from '@/core/state/app-store';
 
 defineProps<{
-  titleKey: string
-}>()
+  titleKey: string;
+}>();
 
-const appStore = useAppStore()
-const { locale } = storeToRefs(appStore)
-const { t, locale: i18nLocale } = useI18n()
+const appStore = useAppStore();
+const { locale } = storeToRefs(appStore);
+const { t, locale: i18nLocale } = useI18n();
 
 function onLocaleChange(event: SelectCustomEvent): void {
-  const nextLocale = event.detail.value as AppLocale
-  appStore.setLocale(nextLocale)
-  i18nLocale.value = nextLocale
+  const nextLocale = event.detail.value as AppLocale;
+  appStore.setLocale(nextLocale);
+  i18nLocale.value = nextLocale;
 }
 </script>
 

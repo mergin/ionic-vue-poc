@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n';
 import {
   IonTabBar,
   IonTabButton,
@@ -32,7 +32,7 @@ import {
   IonIcon,
   IonPage,
   IonRouterOutlet,
-} from '@ionic/vue'
+} from '@ionic/vue';
 
-const { t } = useI18n()
+const { t } = useI18n();
 </script>

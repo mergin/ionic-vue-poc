@@ -1,7 +1,7 @@
-import { createI18n } from 'vue-i18n'
+import { createI18n } from 'vue-i18n';
 
-import en from '@/assets/i18n/en.json'
-import es from '@/assets/i18n/es.json'
+import en from '@/assets/i18n/en.json';
+import es from '@/assets/i18n/es.json';
 
 export const i18n = createI18n({
   legacy: false,
@@ -11,4 +11,4 @@ export const i18n = createI18n({
     en,
     es,
   },
-})
+});

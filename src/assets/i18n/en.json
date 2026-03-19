@@ -37,7 +37,14 @@
     "description": "Recent social updates for parity tracking.",
     "loading": "Loading posts...",
     "error": "Unable to load social feed.",
-    "empty": "No posts yet."
+    "empty": "No posts yet.",
+    "feedAriaLabel": "Social media feed",
+    "like": "Like",
+    "repost": "Repost",
+    "likes": "Likes",
+    "reposts": "Reposts",
+    "postedAt": "Posted at {time}",
+    "by": "by {author}"
   },
   "common": {
     "retry": "Retry",

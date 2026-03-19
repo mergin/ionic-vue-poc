@@ -9,11 +9,11 @@ export async function getJson<T>(url: string, init?: RequestInit): Promise<T> {
       Accept: 'application/json',
       ...(init?.headers ?? {}),
     },
-  })
+  });
 
   if (!response.ok) {
-    throw new Error(`Request failed with status ${response.status}`)
+    throw new Error(`Request failed with status ${response.status}`);
   }
 
-  return (await response.json()) as T
+  return (await response.json()) as T;
 }

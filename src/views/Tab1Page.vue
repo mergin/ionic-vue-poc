@@ -10,13 +10,13 @@
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonPage } from '@ionic/vue'
-import { useI18n } from 'vue-i18n'
+import { IonContent, IonPage } from '@ionic/vue';
+import { useI18n } from 'vue-i18n';
 
-import AppHeader from '@/app/AppHeader.vue'
-import SocialFeedPanel from '@/features/social-media/components/SocialFeedPanel.vue'
+import AppHeader from '@/app/AppHeader.vue';
+import SocialFeedPanel from '@/features/social-media/components/SocialFeedPanel.vue';
 
-const { t } = useI18n()
+const { t } = useI18n();
 </script>
 
 <style scoped>

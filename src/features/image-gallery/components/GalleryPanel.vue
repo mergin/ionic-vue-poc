@@ -20,13 +20,13 @@
 </template>
 
 <script setup lang="ts">
-import { IonButton } from '@ionic/vue'
-import { useI18n } from 'vue-i18n'
+import { IonButton } from '@ionic/vue';
+import { useI18n } from 'vue-i18n';
 
-import { useGallery } from '../composables/useGallery'
+import { useGallery } from '../composables/useGallery';
 
-const { t } = useI18n()
-const { loading, error, images, load } = useGallery()
+const { t } = useI18n();
+const { loading, error, images, load } = useGallery();
 </script>
 
 <style scoped>

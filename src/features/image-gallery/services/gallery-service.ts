@@ -1,18 +1,18 @@
-import { getJson } from '@/core/api/http-client'
-import { AppError } from '@/core/error/app-error'
+import { getJson } from '@/core/api/http-client';
+import { AppError } from '@/core/error/app-error';
 
-import type { GalleryImage } from '../models/gallery-image'
+import type { GalleryImage } from '../models/gallery-image';
 
 interface GalleryResponse {
-  images: GalleryImage[]
+  images: GalleryImage[];
 }
 
 /** Retrieves gallery images from the API contract endpoint. */
 export async function fetchGalleryImages(): Promise<GalleryImage[]> {
   try {
-    const response = await getJson<GalleryResponse>('/api/gallery')
-    return response.images
+    const response = await getJson<GalleryResponse>('/api/gallery');
+    return response.images;
   } catch (error) {
-    throw new AppError('Failed to load gallery images.', error)
+    throw new AppError('Failed to load gallery images.', error);
   }
 }

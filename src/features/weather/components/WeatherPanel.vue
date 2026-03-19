@@ -32,18 +32,18 @@
 </template>
 
 <script setup lang="ts">
-import { IonButton } from '@ionic/vue'
-import { useI18n } from 'vue-i18n'
+import { IonButton } from '@ionic/vue';
+import { useI18n } from 'vue-i18n';
 
-import { useWeather } from '../composables/useWeather'
+import { useWeather } from '../composables/useWeather';
 
-const { t } = useI18n()
-const { loading, error, summary, load } = useWeather()
+const { t } = useI18n();
+const { loading, error, summary, load } = useWeather();
 
 const dateFormatter = new Intl.DateTimeFormat(undefined, {
   dateStyle: 'medium',
   timeStyle: 'short',
-})
+});
 </script>
 
 <style scoped>
