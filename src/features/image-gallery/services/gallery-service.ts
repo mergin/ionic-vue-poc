@@ -10,7 +10,7 @@ interface GalleryResponse {
 /** Retrieves gallery images from the API contract endpoint. */
 export async function fetchGalleryImages(): Promise<GalleryImage[]> {
   try {
-    const response = await getJson<GalleryResponse>('/api/gallery');
+    const response = await getJson<GalleryResponse>('/picsum/v2/list');
     return response.images;
   } catch (error) {
     throw new AppError('Failed to load gallery images.', error);

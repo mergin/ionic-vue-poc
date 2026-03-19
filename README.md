@@ -75,7 +75,7 @@ flowchart TD
 	G --> H3[Tab 3: Weather]
 
 	H1 --> I1[Feature composable loads /api/social]
-	H2 --> I2[Feature composable loads /api/gallery]
+	H2 --> I2[Feature composable loads /picsum]
 	H3 --> I3[Feature composable loads /api/weather]
 
 	I1 --> J[MSW handlers return mock JSON]
@@ -119,7 +119,7 @@ This keeps transport logic separate from view-state orchestration.
   - Bootstrapping: [src/main.ts](src/main.ts) via `startMockWorker()`
 - Shared handlers:
   - [src/mocks/handlers.ts](src/mocks/handlers.ts)
-  - Endpoints mocked: `/api/weather`, `/api/gallery`, `/api/social`
+  - Endpoints mocked: `/api/weather`, `/picsum`, `/api/social`
 - Test mocking:
   - Node server: [tests/msw-server.ts](tests/msw-server.ts)
   - Lifecycle hooks: [tests/setup.ts](tests/setup.ts)

@@ -21,8 +21,17 @@ describe('Weather render', () => {
 
     // ASSERT
     expect(await screen.findByRole('heading', { name: 'Weather' })).toBeTruthy();
-    expect(await screen.findByText('Humidity: 42%')).toBeTruthy();
-    expect(await screen.findByText('Wind: 18 km/h')).toBeTruthy();
+    // Assert on list items for humidity and wind
+    const items = await screen.findAllByRole('listitem');
+    function normalize(s: string) {
+      return s.replace(/\s+/g, ' ').trim().toLowerCase();
+    }
+    expect(items.some((li) => normalize(li.textContent || '').includes('humidity: 43%'))).toBe(
+      true,
+    );
+    expect(items.some((li) => normalize(li.textContent || '').includes('wind: 17 km/h'))).toBe(
+      true,
+    );
   });
 
   test('renders error state and retry button when service fails', async () => {

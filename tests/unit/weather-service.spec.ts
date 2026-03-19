@@ -1,34 +1,29 @@
 import { describe, expect, test } from 'vitest';
-import { http, HttpResponse } from 'msw';
 
-import { fetchWeatherSummary } from '@/features/weather/services/weather-service';
-import { mswServer } from '../msw-server';
+import { getCurrentWeather } from '@/features/weather/services/weather-service';
 
-describe('fetchWeatherSummary', () => {
-  test('returns typed weather data from the service endpoint', async () => {
+describe('getCurrentWeather', () => {
+  test('returns OpenWeather API response for city', async () => {
     // ARRANGE
+    const city = 'Madrid';
     // ACT
-    const result = await fetchWeatherSummary();
+    const result = await getCurrentWeather(city);
 
     // ASSERT
-    expect(result.city).toBe('Madrid');
-    expect(result.temperatureC).toBe(24);
-    expect(result.humidityPct).toBe(42);
-    expect(result.windKph).toBe(18);
+    expect(result).toHaveProperty('name', 'Madrid');
+    expect(result).toHaveProperty('main');
+    expect(result.main).toHaveProperty('temp');
+    expect(result).toHaveProperty('weather');
+    expect(Array.isArray(result.weather)).toBe(true);
+    expect(result.weather[0]).toHaveProperty('main');
+    expect(result).toHaveProperty('wind');
   });
 
-  test('throws AppError when the endpoint fails', async () => {
+  test('returns 404 for error city', async () => {
     // ARRANGE
-    mswServer.use(
-      http.get('/api/weather', () => {
-        return HttpResponse.json({ message: 'failure' }, { status: 500 });
-      }),
-    );
+    const city = 'error-city';
 
-    // ACT
-    const action = fetchWeatherSummary();
-
-    // ASSERT
-    await expect(action).rejects.toThrow('Failed to load weather summary.');
+    // ACT & ASSERT
+    await expect(getCurrentWeather(city)).rejects.toThrow('Request failed with status 404');
   });
 });
